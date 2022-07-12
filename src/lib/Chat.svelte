@@ -1,7 +1,7 @@
 <script>
 	import ChatMessage from './ChatMessage.svelte';
 	import { onMount } from 'svelte';
-	import GUN from 'gun/gun';
+	import GUN from 'gun';
 	import * as animateScroll from 'svelte-scrollto';
 	const db = GUN();
 	let newMessage;

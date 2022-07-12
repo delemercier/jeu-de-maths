@@ -103,25 +103,4 @@
 	div :global(.big-icon) {
 		font-size: 48px;
 	}
-	/* width */
-	::-webkit-scrollbar {
-		width: 14px;
-		height: 16px;
-	}
-
-	/* Track */
-	::-webkit-scrollbar-track {
-		@apply bg-base-200;
-	}
-
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		@apply bg-base-300;
-		border: 2px solid #edf2f7;
-	}
-
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		@apply bg-base-300;
-	}
 </style>

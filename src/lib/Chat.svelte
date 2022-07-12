@@ -10,7 +10,7 @@
 	onMount(() => {
 		var match = {
 			'.': {
-				'>': new Date(+new Date() - 1 * 1000 * 60 * 30 * 1).toISOString()
+				'>': new Date(+new Date() - 1 * 1000 * 60 * 120 * 1).toISOString()
 			},
 			'-': 1
 		};

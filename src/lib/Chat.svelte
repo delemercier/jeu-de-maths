@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import GUN from 'gun';
 	import * as animateScroll from 'svelte-scrollto';
-	const db = GUN();
+	const db = GUN({ radisk: false, localStorage: true });
 	let newMessage;
 	let messages = [];
 

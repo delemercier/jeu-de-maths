@@ -68,7 +68,6 @@
 				Des trucs qui bougent très lentement &#128529;
 			</div>
 
-            <a href="/6eme" in:fade={{ delay: 26000 }} class="link link-primary">va voir le tchat des 6 ème !</a>
 		{/if}
 	</div>
 </main>

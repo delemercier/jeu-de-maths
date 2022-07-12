@@ -2,7 +2,7 @@
 	import ChatMessage from './ChatMessage.svelte';
 	import { onMount } from 'svelte';
 	import { username, user } from './user';
-	import GUN from 'gun';
+	import GUN from 'gun/gun';
   import * as animateScroll from "svelte-scrollto";
 	const db = GUN();
 	let newMessage;
@@ -26,7 +26,7 @@
 					var message = {
 						// transform the data
 						who: await db.user(data).get('alias'), // a user might lie who they are! So let the user system detect whose data it is.
-						what: (await SEA.decrypt(data.what, key)) + '', // force decrypt as text.
+						what: data.what + '', // force decrypt as text.
 						when: GUN.state.is(data, 'what') // get the internal timestamp for the what property.
 					};
 					if (message.what) {
@@ -37,8 +37,7 @@
 			});
 	});
 	async function sendMessage() {
-		const secret = await SEA.encrypt(newMessage, '#foo');
-		const message = user.get('all').set({ what: secret });
+		const message = user.get('all').set({ what: newMessage });
 		const index = new Date().toISOString();
 		db.get('jdm_chat_6eme').get(index).put(message);
 		newMessage = '';
@@ -49,7 +48,7 @@
 	{#if $username}
 		<div class="w-3/4 shadow-2xl mb-5">
 			{#each messages as message (message.when)}
-				<ChatMessage {message} sender={$username} />
+				<ChatMessage {message}  />
 			{/each}
 		</div>
 		<div class="w-3/4">

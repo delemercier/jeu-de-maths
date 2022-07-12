@@ -1,6 +1,5 @@
 <script>
 	export let message;
-	export let sender;
 </script>
 
 <div>

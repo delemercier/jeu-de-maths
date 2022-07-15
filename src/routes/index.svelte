@@ -48,7 +48,7 @@
 				class="text-2xl text-center my-2 bg-gradient-to-r from-indigo-500 p-3 w-full"
 				in:fade={{ duration: 2000, delay: 4000 }}
 			>
-				Un site rien que pour toi !
+				coucou Julien en live !
 			</div>
 
 			<div class="h-12" />
